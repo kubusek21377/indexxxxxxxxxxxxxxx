@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>patryk </title>
+</head>
+<body>
+    <label for="odpowiedz"> Patryk jest głodny?</label>
+    <input type="text" id="odpowiedz">
+    <button onclick="sprawdzOdpowiedz()">Sprawdź</button>
+    <p id="wynik"></p>
+
+    <script>
+        function sprawdzOdpowiedz() {
+            var odpowiedz = document.getElementById("odpowiedz").value;
+            var wynik = document.getElementById("wynik");
+
+            if (odpowiedz.toLowerCase() === "tak") {
+                wynik.textContent = "Tak mysle";
+            } else {
+                wynik.textContent = "Nie,bo kebaba jadl.";
+            }
+           
+        }
+    </script>
+    
+<script>
+    function sprawdzOdpowiedz() {
+        
+        var odpowiedz = document.getElementById("odpowiedz").value;
+        var wynik;
+
+       
+        if (odpowiedz === "TAK") {
+           
+            wynik = "Patryk powinien zjeść cały obiad złożony z warzyw";
+        } else if (odpowiedz === "NIE") {
+            
+            wynik = "Patryk nie powinien jeść całego obiadu,BO JEST GRUBY";
+        } else if (odpowiedz === "NIE WIEM") {
+            
+            wynik = "Patryk nie wie czy powinien zjeść obiad, BO JEST NA DIECIE";
+        } else {
+           
+            wynik = "Niepoprawna odpowiedź. Proszę wpisać 'TAK', 'NIE' lub 'NIE WIEM'.";
+        }
+
+        document.getElementById("wynik").innerHTML = wynik;
+    }
+</script>
+</body>
+</html>
